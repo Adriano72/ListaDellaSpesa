@@ -17,6 +17,18 @@
 <body>
   <ion-app></ion-app>
 
+  <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBEdHG2lDj63kuBC11yr-6byWIE8xtw4ns",
+      authDomain: "la-lista-della-spesa.firebaseapp.com",
+      databaseURL: "https://la-lista-della-spesa.firebaseio.com",
+      storageBucket: "la-lista-della-spesa.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
   <!-- Polyfill needed for platforms without Promise and Collection support -->
