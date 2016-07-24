@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar secondary>
+    <ion-navbar primary>
         <ion-title>
             {{lista.title}}
         </ion-title>
@@ -22,17 +22,17 @@
 </ion-header>
 <ion-content>
     <ion-list no-lines>
-        <ion-item-sliding *ngFor="let cosa of lista.cose" class="home-slidingitem">
+        <ion-item-sliding *ngFor="let item of lista.items" class="home-slidingitem">
             <ion-item>
                 <ion-label>{{lista.title}}</ion-label>
-                <ion-checkbox [checked]="cosa.checked" (click)="toggleCosa(item)" class="checklist-item">
+                <ion-checkbox [checked]="item.checked" (click)="toggleCosa(item)" class="checklist-item">
                 </ion-checkbox>
             </ion-item>
             <ion-item-options>
-                <button light (click)="renameCosa(cosa)">
+                <button light (click)="renameCosa(item)">
                     <ion-icon name="clipboard"></ion-icon>
                 </button>
-                <button danger (click)="removeCosa(cosa)">
+                <button danger (click)="removeCosa(item)">
                     <ion-icon name="trash"></ ion-icon>
                 </button>
             </ion-item-options>

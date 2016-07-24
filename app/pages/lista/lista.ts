@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, Alert} from 'ionic-angular';
 
 /*
   Generated class for the ListaPage page.
@@ -12,8 +12,12 @@ import { NavController } from 'ionic-angular';
 })
 export class ListaPage {
 
-  constructor(private nav: NavController) {
+  lista: any;
 
-  }
+  constructor(public nav: NavController, public navParams: NavParams) {
+        this.lista = this.navParams.get('lista');
+        console.log("LISTA "+this.lista);
+
+    }
 
 }
